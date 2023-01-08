@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>Unemloyment Global Statistics</h1>
+        </div>
+        <!--<div class="desc">
+            <h2 id="des">Description</h2>
+            <p>This is a description regarding the purpose of the website</p>
+            <a href="map.svg">Click on this to see a map</a>
+        </div> -->
+
+            
+
+        
+    </div>
+    <div class="mp">
+        <object type="image/svg+xml" data="map2.svg"></object>
+    </div>
+	<br />
+	<!--<iframe src="iframe1.html"
+			name="iframe1"
+			width="41%"
+			height="500"
+            style="overflow: hidden;">
+	</iframe>-->
+    <div class="navbar1">
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Tables
+          <i class="down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="http://localhost/dropdownTab/" target="iframe2">Globe</a>
+          <a href="http://localhost/dropdownTab/index2.php" target="iframe2">Top 10</a>
+          <a href="http://localhost/dropdownTab/index3.php" target="iframe2">Bottom 10</a>
+          <a href="http://localhost/dropdownTab/index4.php" target="iframe2">By Gender</a>
+          <a href="http://localhost/dropdownTab/index5.php" target="iframe2">Asia</a>
+          <a href="http://localhost/dropdownTab/index6.php" target="iframe2">Africa</a>
+          <a href="http://localhost/dropdownTab/index7.php" target="iframe2">Australia</a>
+          <a href="http://localhost/dropdownTab/index8.php" target="iframe2">Europe</a>
+          <a href="http://localhost/dropdownTab/index9.php" target="iframe2">Latin America & Carrebian</a>
+          <a href="http://localhost/dropdownTab/index10.php" target="iframe2">North America</a>
+          <a href="http://localhost/dropdownTab/index11.php" target="iframe2">South America</a>
+        </div>
+        </div> 
+      </div>
+      <br /><br />
+	<iframe src=""
+			name="iframe2"
+            id="Iframe"
+			width="41%" height="Adjusting">
+	</iframe>
+      
+      <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      
+      let category = document.querySelector(".dropbtn");
+      
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {  
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+      }
+
+      // Selecting the iframe element
+      var frame = document.getElementById("Iframe");
+      // Adjusting the iframe height onload event
+      frame.onload = function()
+      // function execute while load the iframe
+      {
+        // set the height of the iframe as 
+        // the height of the iframe content
+        frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
+        // set the width of the iframe as the 
+        // width of the iframe content
+        frame.style.width  = frame.contentWindow.document.body.scrollWidth+'px';
+    }
+      </script>
+	
+</body>
+</html>
